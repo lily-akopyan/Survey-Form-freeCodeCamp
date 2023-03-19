@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <title>Survey Form</title>
-    <link rel="stylesheet" href="styles.css">
-   </head>
-</html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
 <body>
-  <h1 id="title">Hotel guest satisfaction survey</h1>
+  <h1 id="title">Festival attendance questionnaire</h1>
   <p id="description">Thank you for filling out this survey. Your feedback helps us improve our services.</p>
   <form id="survey-form" method="POST">
     <fieldset>
-      <label for="name">Full name: <input id="name" name="name" type="text" required /></label>
-      <label for="email">Email: <input id="email" name="email" type="email" required /></label>
-      <label for="age">Age: <input id="age" name="age" type="number"/></label>
-  </form> 
-  </body>
+      <label for="name-label">Full name: <input id="name-label" name="name" type="text" required
+          pattern="/^[a-z ,.'-]+$/i" placeholder="type your full name here..." /></label>
+      <label for="email-label">Email: <input id="email-label" name="email" type="email" required
+          placeholder="type your email address here..." /></label>
+      <label for="phone">Phone number (optional): <input id="phone" name="phone" type="tel"
+          pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$" placeholder="UK phone numbers only..." /></label>
+      <label for="number-label">Age (years): <input id="number-label" name="age" type="number" min="18" max="110"
+          required placeholder="you must be over 18" /></label>
+      <label for="rate-overall">How would you rate your overall experience (0-awful, 10-excellent)? <input
+          id="rate-overall" name="rate-overall" type="range" min="0" max="10" /></label>
+      <legend>What areas could we improve?</legend>
+      <label for="artists"><input id="artists" name="artists" type="checkbox" />The artists</label>
+      <label for="facilities"><input id="facilities" name="facilities" type="checkbox" />Facilities</label>
+      <label for="food"><input id="food" name="food" type="checkbox" />Food</label>
+      <label for="accomodation"><input id="accomodation" name="accomodation" type="checkbox" />Accomodation</label>
+      <label for="staff"><input id="staff" name="staff" type="checkbox" />Staff</label>
+      <label for="cleanliness"><input id="cleanliness" name="cleanliness" type="checkbox" />Cleanliness</label>
+      <label for="other"><input id="other" name="other" type="checkbox" />Other (please explain below)</label>
+      <label for="other-explain"><input id="other-explain" name="other-explain" type="textare" max="200"
+          placeholder="type your answer here..." /></label>
+      <label for="dropdown">How did you hear about us? <select id="dropdown" name="dropdown" required>
+          <option value="">Select one</option>
+          <option value="1">Google</option>
+          <option value="2">YouTube</option>
+          <option value="3">Instagram</option>
+          <option value="4">TV/Radio advertisement</option>
+          <option value="5">Friends/family</option>
+          <option value="6">Other</option>
+        </select>
+      </label>
+      <legend>Would you come again?</legend>
+      <label for="yes-again"><input id="yes-again" name="yes-again" type="radio" />Yes</label>
+      <label for="not-again"><input id="not-again" name="not-again" type="radio" />No</label>
+      <label for="suggest">Any suggestions?<input id="suggest" name="suggest" type="textarea" maxlength="500"
+          placeholder="Let us know how we can improve..." /></label>
+      <input type="submit" value="Submit" />
+    </fieldset>
+  </form>
+</body>
+
+</html>
