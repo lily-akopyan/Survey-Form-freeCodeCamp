@@ -1,9 +1,37 @@
-body{
-    width:100%;
+body {
+    width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: #c44484;
-    color: #ffffff
+    background-color: #b33ab3d5;
+    color: #ffffff;
+    font-family: Candara, Tahoma, sans-serif;
+    font-size: 1.2rem;
 }
 
+h1,
+p {
+    margin: 1em auto;
+    text-align: center;
+}
 
+form {
+    width: 80vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    background-color: #57055794;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+input {
+    display: block;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    display: inline;
+}
