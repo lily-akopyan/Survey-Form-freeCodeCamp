@@ -2,24 +2,35 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-color: #b33ab3d5;
+    background-color: #b33ab3af;
     color: #ffffff;
     font-family: Candara, Tahoma, sans-serif;
     font-size: 1.2rem;
 }
 
 h1,
-p {
+.description {
     margin: 1em auto;
     text-align: center;
+
+}
+
+.description {
+    font-style: italic;
 }
 
 form {
     width: 80vw;
-    max-width: 500px;
+    max-width: 700px;
     min-width: 300px;
     margin: 0 auto;
-    background-color: #57055794;
+    background-color: rgba(170, 13, 209, 0.8);
+    border-radius: 0.5rem;
+}
+
+fieldset {
+    border: none;
+
 }
 
 label {
@@ -27,11 +38,47 @@ label {
     margin-bottom: 1rem;
 }
 
-input {
+label:first-of-type {
+    margin-top: 0.8rem;
+}
+
+
+input,
+select,
+textarea {
     display: block;
+    width: 100%;
+    font-size: 0.8em;
+    color: rgba(31, 28, 30, 0.83);
+    border-radius: 0.4rem;
+    margin-top: 0.2rem
 }
 
 input[type=radio],
 input[type=checkbox] {
     display: inline;
+    text-align: left;
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+.again {
+    margin-top: 0.3rem;
+}
+
+input[type=submit] {
+    background-color: rgba(35, 43, 100, 0.7);
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.clue {
+    font-size: 0.9rem;
 }

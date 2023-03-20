@@ -9,7 +9,8 @@
 
 <body>
   <h1 id="title">Festival attendance questionnaire</h1>
-  <p id="description">Thank you for filling out this survey. Your feedback helps us improve our services.</p>
+  <p class="description" id="description">Thank you for filling out this survey. Your feedback helps us improve our
+    services.</p>
   <form id="survey-form" method="POST">
     <fieldset>
       <label for="name-label">Full name: <input id="name-label" name="name" type="text" required
@@ -20,18 +21,28 @@
           pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$" placeholder="UK phone numbers only..." /></label>
       <label for="number-label">Age (years): <input id="number-label" name="age" type="number" min="18" max="110"
           required placeholder="you must be over 18" /></label>
+    </fieldset>
+    <fieldset>
       <label for="rate-overall">How would you rate your overall experience (0-awful, 10-excellent)? <input
           id="rate-overall" name="rate-overall" type="range" min="0" max="10" /></label>
-      <p>What areas could we improve?</p>
+      <p>What areas could we improve? (select all that apply)</p>
       <label for="artists"><input id="artists" name="artists" type="checkbox" value="artists" />The artists</label>
-      <label for="facilities"><input id="facilities" name="facilities" type="checkbox" value="facilities" />Facilities</label>
-      <label for="food"><input id="food" name="food" type="checkbox" value="food"/>Food</label>
-      <label for="accomodation"><input id="accomodation" name="accomodation" type="checkbox" value="accomodation" />Accomodation</label>
+      <label for="facilities"><input id="facilities" name="facilities" type="checkbox"
+          value="facilities" />Facilities</label>
+      <label for="food"><input id="food" name="food" type="checkbox" value="food" />Food</label>
+      <label for="accomodation"><input id="accomodation" name="accomodation" type="checkbox"
+          value="accomodation" />Accomodation</label>
       <label for="staff"><input id="staff" name="staff" type="checkbox" value="staff" />Staff</label>
-      <label for="cleanliness"><input id="cleanliness" name="cleanliness" type="checkbox" value="cleanliness" />Cleanliness</label>
-      <label for="other"><input id="other" name="other" type="checkbox" value="other" />Other (please explain below)</label>
-      <label for="other-explain"><input id="other-explain" name="other-explain" type="textarea" max="200"
-          placeholder="type your answer here..." /></label>
+      <label for="cleanliness"><input id="cleanliness" name="cleanliness" type="checkbox"
+          value="cleanliness" />Cleanliness</label>
+      <label for="other"><input id="other" name="other" type="checkbox" value="other" />Other (please explain
+        below)</label>
+      <label for="other-explain">
+        <textarea id="other-explain" name="other-explain" maxlength="200" rows="3" cols="30"
+          placeholder="type your answer here..."></textarea>
+      </label>
+    </fieldset>
+    <fieldset>
       <label for="dropdown">How did you hear about us? <select id="dropdown" name="dropdown" required>
           <option value="">Select one</option>
           <option value="1">Google</option>
@@ -42,11 +53,15 @@
           <option value="6">Other</option>
         </select>
       </label>
-      <p>Would you come again?</p>
+    </fieldset>
+    <fieldset>
+      <p class="again">Would you come again?</p>
       <label for="yes-again"><input id="yes-again" name="yes-again" type="radio" />Yes</label>
       <label for="not-again"><input id="not-again" name="not-again" type="radio" />No</label>
-      <label for="suggest">Any suggestions?<input id="suggest" name="suggest" type="textarea" maxlength="500"
-          placeholder="Let us know how we can improve..." /></label>
+      <label for="suggest">Any suggestions?<textarea id="suggest" name="suggest" maxlength="500" rows="3" cols="30"
+          placeholder="Let us know how we can improve..."></textarea></label>
+    </fieldset>
+    <fieldset>
       <input type="submit" value="Submit" />
     </fieldset>
   </form>
