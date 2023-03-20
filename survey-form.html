@@ -13,19 +13,19 @@
     services.</p>
   <form id="survey-form" method="POST">
     <fieldset>
-      <label for="name-label">Full name: <input id="name-label" name="name" type="text" required
+      <label for="name-label">Full name <input id="name-label" name="name" type="text" required
           pattern="/^[a-z ,.'-]+$/i" placeholder="type your full name here..." /></label>
-      <label for="email-label">Email: <input id="email-label" name="email" type="email" required
+      <label for="email-label">Email <input id="email-label" name="email" type="email" required
           placeholder="type your email address here..." /></label>
-      <label for="phone">Phone number (optional): <input id="phone" name="phone" type="tel"
+      <label for="phone">Phone number <span class="clue">(optional)</span> <input id="phone" name="phone" type="tel"
           pattern="^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$" placeholder="UK phone numbers only..." /></label>
-      <label for="number-label">Age (years): <input id="number-label" name="age" type="number" min="18" max="110"
-          required placeholder="you must be over 18" /></label>
+      <label for="number-label">Age <span class="clue">(years)</span> <input id="number-label" name="age" type="number"
+          min="18" max="110" required placeholder="you must be over 18" /></label>
     </fieldset>
     <fieldset>
-      <label for="rate-overall">How would you rate your overall experience (0-awful, 10-excellent)? <input
-          id="rate-overall" name="rate-overall" type="range" min="0" max="10" /></label>
-      <p>What areas could we improve? (select all that apply)</p>
+      <label for="rate-overall">How would you rate your overall experience? <span class="clue">(0-awful,
+          10-excellent)</span> <input id="rate-overall" name="rate-overall" type="range" min="0" max="10" /></label>
+      <p>What areas could we improve? <span class="clue">(select all that apply)</span></p>
       <label for="artists"><input id="artists" name="artists" type="checkbox" value="artists" />The artists</label>
       <label for="facilities"><input id="facilities" name="facilities" type="checkbox"
           value="facilities" />Facilities</label>
@@ -35,8 +35,9 @@
       <label for="staff"><input id="staff" name="staff" type="checkbox" value="staff" />Staff</label>
       <label for="cleanliness"><input id="cleanliness" name="cleanliness" type="checkbox"
           value="cleanliness" />Cleanliness</label>
-      <label for="other"><input id="other" name="other" type="checkbox" value="other" />Other (please explain
-        below)</label>
+      <label for="other"><input id="other" name="other" type="checkbox" value="other" />Other <span class="clue">(please
+          explain
+          below)</span></label>
       <label for="other-explain">
         <textarea id="other-explain" name="other-explain" maxlength="200" rows="3" cols="30"
           placeholder="type your answer here..."></textarea>
